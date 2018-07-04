@@ -10,11 +10,13 @@ import UIKit
 
 class BitcoinViewController: UIViewController {
     
-    // MARK: - Propeties
+    // MARK: - Properties
     @IBOutlet weak var primary: UILabel!
     @IBOutlet weak var partial: UILabel!
     @IBOutlet weak var refresh: UIButton!
     
+    let fetcher = BitcoinPriceFetcher(networking: HTTPNetworking())
+
     private let dollarsDisplayFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = 0
@@ -47,33 +49,13 @@ class BitcoinViewController: UIViewController {
     }
     
     private func requestPrice() {
-        let bitcoin = Coinbase.bitcoin.path
-        
-        guard let url = URL(string: bitcoin) else { return }
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringCacheData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
-            
-            if let error = error {
-                print("Error received requesting Bitcoin price: \(error.localizedDescription)")
-                return
-            }
-            
-            let decoder = JSONDecoder()
-            
-            guard let data = data,
-                let response = try? decoder.decode(PriceResponse.self,
-                                                   from: data) else { return }
-            
-            print("Price returned: \(response.data.amount)")
+        fetcher.fetch { response in
+            guard let response = response else { return }
             
             DispatchQueue.main.async { [weak self] in
                 self?.updateLabel(price: response.data)
             }
         }
-        
-        task.resume()
     }
     
 }
