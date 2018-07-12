@@ -12,6 +12,7 @@
 		D5C04E217F416814AB03544E /* Pods_BitcoinDIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90AFE6FCFD875104448B1B2 /* Pods_BitcoinDIUITests.framework */; };
 		E741AEBE20F7E9E9004A73C3 /* AutoregisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741AEBD20F7E9E9004A73C3 /* AutoregisterTests.swift */; };
 		E741AEC020F7F046004A73C3 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741AEBF20F7F045004A73C3 /* NetworkingTests.swift */; };
+		E741AEC220F7FF5A004A73C3 /* SwinjectStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741AEC120F7FF5A004A73C3 /* SwinjectStoryboard+Extension.swift */; };
 		E785B50220ED79EE006320A7 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E785B50120ED79EE006320A7 /* HTTPNetworking.swift */; };
 		E785B50420ED7F5C006320A7 /* BitcoinPriceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E785B50320ED7F5C006320A7 /* BitcoinPriceFetcher.swift */; };
 		E785B50A20ED8B29006320A7 /* dataset-one.json in Resources */ = {isa = PBXBuildFile; fileRef = E785B50820ED8B29006320A7 /* dataset-one.json */; };
@@ -57,6 +58,7 @@
 		B90AFE6FCFD875104448B1B2 /* Pods_BitcoinDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E741AEBD20F7E9E9004A73C3 /* AutoregisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoregisterTests.swift; sourceTree = "<group>"; };
 		E741AEBF20F7F045004A73C3 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		E741AEC120F7FF5A004A73C3 /* SwinjectStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		E785B50120ED79EE006320A7 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		E785B50320ED7F5C006320A7 /* BitcoinPriceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceFetcher.swift; sourceTree = "<group>"; };
 		E785B50820ED8B29006320A7 /* dataset-one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dataset-one.json"; sourceTree = "<group>"; };
@@ -135,8 +137,8 @@
 		E785B50020ED79BC006320A7 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				E785B50120ED79EE006320A7 /* HTTPNetworking.swift */,
 				E785B50320ED7F5C006320A7 /* BitcoinPriceFetcher.swift */,
+				E785B50120ED79EE006320A7 /* HTTPNetworking.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -175,9 +177,10 @@
 		E7B1C6FB20EC359200AE56CD /* BitcoinDI */ = {
 			isa = PBXGroup;
 			children = (
-				E785B50020ED79BC006320A7 /* Dependencies */,
-				E7B1C6FC20EC359200AE56CD /* AppDelegate.swift */,
 				E7B1C70820EC359300AE56CD /* Info.plist */,
+				E7B1C6FC20EC359200AE56CD /* AppDelegate.swift */,
+				E741AEC120F7FF5A004A73C3 /* SwinjectStoryboard+Extension.swift */,
+				E785B50020ED79BC006320A7 /* Dependencies */,
 				E7B1C73420EC3B6F00AE56CD /* Model */,
 				E7B1C72A20EC37E200AE56CD /* Storyboard */,
 				E7B1C72B20EC37FB00AE56CD /* ViewControllers */,
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E741AEC220F7FF5A004A73C3 /* SwinjectStoryboard+Extension.swift in Sources */,
 				E785B50420ED7F5C006320A7 /* BitcoinPriceFetcher.swift in Sources */,
 				E7B1C73320EC3AD100AE56CD /* EndPoint.swift in Sources */,
 				E7B1C72F20EC3A6B00AE56CD /* PriceResponse.swift in Sources */,
