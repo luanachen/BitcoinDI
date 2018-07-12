@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7A9864EA1C202414334732D2 /* Pods_BitcoinDITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE7B2BEDA7A9EE3A1E328E9 /* Pods_BitcoinDITests.framework */; };
+		AB27A43CF826365204164769 /* Pods_BitcoinDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F74712ECCAFFD3F084F957 /* Pods_BitcoinDI.framework */; };
 		D5C04E217F416814AB03544E /* Pods_BitcoinDIUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90AFE6FCFD875104448B1B2 /* Pods_BitcoinDIUITests.framework */; };
+		E741AEBE20F7E9E9004A73C3 /* AutoregisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741AEBD20F7E9E9004A73C3 /* AutoregisterTests.swift */; };
+		E741AEC020F7F046004A73C3 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E741AEBF20F7F045004A73C3 /* NetworkingTests.swift */; };
 		E785B50220ED79EE006320A7 /* HTTPNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E785B50120ED79EE006320A7 /* HTTPNetworking.swift */; };
 		E785B50420ED7F5C006320A7 /* BitcoinPriceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E785B50320ED7F5C006320A7 /* BitcoinPriceFetcher.swift */; };
 		E785B50A20ED8B29006320A7 /* dataset-one.json in Resources */ = {isa = PBXBuildFile; fileRef = E785B50820ED8B29006320A7 /* dataset-one.json */; };
@@ -24,7 +27,6 @@
 		E7B1C73120EC3AA400AE56CD /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1C73020EC3AA400AE56CD /* Error.swift */; };
 		E7B1C73320EC3AD100AE56CD /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1C73220EC3AD100AE56CD /* EndPoint.swift */; };
 		E7B1C73720EC3C0700AE56CD /* BitcoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B1C73620EC3C0700AE56CD /* BitcoinViewController.swift */; };
-		F907A72F069E18C95930F323 /* Pods_BitcoinDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F74712ECCAFFD3F084F957 /* Pods_BitcoinDI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		920F9B96894EB36371A6F7C7 /* Pods-BitcoinDIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinDIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinDIUITests/Pods-BitcoinDIUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B537F9E5C3F44B036D4D90BB /* Pods-BitcoinDI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinDI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinDI/Pods-BitcoinDI.debug.xcconfig"; sourceTree = "<group>"; };
 		B90AFE6FCFD875104448B1B2 /* Pods_BitcoinDIUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinDIUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E741AEBD20F7E9E9004A73C3 /* AutoregisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoregisterTests.swift; sourceTree = "<group>"; };
+		E741AEBF20F7F045004A73C3 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		E785B50120ED79EE006320A7 /* HTTPNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworking.swift; sourceTree = "<group>"; };
 		E785B50320ED7F5C006320A7 /* BitcoinPriceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceFetcher.swift; sourceTree = "<group>"; };
 		E785B50820ED8B29006320A7 /* dataset-one.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dataset-one.json"; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F907A72F069E18C95930F323 /* Pods_BitcoinDI.framework in Frameworks */,
+				AB27A43CF826365204164769 /* Pods_BitcoinDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +190,8 @@
 			isa = PBXGroup;
 			children = (
 				E785B50C20ED8C2C006320A7 /* BasicTests.swift */,
+				E741AEBD20F7E9E9004A73C3 /* AutoregisterTests.swift */,
+				E741AEBF20F7F045004A73C3 /* NetworkingTests.swift */,
 				E785B50720ED8B29006320A7 /* Test Data */,
 				E7B1C71320EC359300AE56CD /* Info.plist */,
 			);
@@ -267,6 +273,7 @@
 				E7B1C70920EC359300AE56CD /* Sources */,
 				E7B1C70A20EC359300AE56CD /* Frameworks */,
 				E7B1C70B20EC359300AE56CD /* Resources */,
+				0928C5913676ECEB592C7D9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -378,14 +385,38 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinDI/Pods-BitcoinDI-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinDI/Pods-BitcoinDI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0928C5913676ECEB592C7D9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinDITests/Pods-BitcoinDITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/SwinjectAutoregistration/SwinjectAutoregistration.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectAutoregistration.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinDITests/Pods-BitcoinDITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2F46BC8AE7012CEB3CEBACA5 /* [CP] Check Pods Manifest.lock */ = {
@@ -465,6 +496,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E785B50D20ED8C2C006320A7 /* BasicTests.swift in Sources */,
+				E741AEC020F7F046004A73C3 /* NetworkingTests.swift in Sources */,
+				E741AEBE20F7E9E9004A73C3 /* AutoregisterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

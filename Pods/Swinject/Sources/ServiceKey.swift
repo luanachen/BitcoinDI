@@ -16,19 +16,12 @@ public protocol ServiceKeyOption: CustomStringConvertible {
 
 // MARK: - ServiceKey
 internal struct ServiceKey {
-    internal let serviceType: Any.Type
-    internal let argumentsType: Any.Type
+    internal let factoryType: FunctionType.Type
     internal let name: String?
     internal let option: ServiceKeyOption? // Used for SwinjectStoryboard or other extensions.
 
-    internal init(
-        serviceType: Any.Type,
-        argumentsType: Any.Type,
-        name: String? = nil,
-        option: ServiceKeyOption? = nil
-    ) {
-        self.serviceType = serviceType
-        self.argumentsType = argumentsType
+    internal init(factoryType: FunctionType.Type, name: String? = nil, option: ServiceKeyOption? = nil) {
+        self.factoryType = factoryType
         self.name = name
         self.option = option
     }
@@ -37,17 +30,13 @@ internal struct ServiceKey {
 // MARK: Hashable
 extension ServiceKey: Hashable {
     var hashValue: Int {
-        return ObjectIdentifier(serviceType).hashValue
-            ^ ObjectIdentifier(argumentsType).hashValue
-            ^ (name?.hashValue ?? 0)
-            ^ (option?.hashValue ?? 0)
+        return String(describing: factoryType).hashValue ^ (name?.hashValue ?? 0) ^ (option?.hashValue ?? 0)
     }
 }
 
 // MARK: Equatable
 func == (lhs: ServiceKey, rhs: ServiceKey) -> Bool {
-    return lhs.serviceType == rhs.serviceType
-        && lhs.argumentsType == rhs.argumentsType
+    return lhs.factoryType == rhs.factoryType
         && lhs.name == rhs.name
         && equalOptions(opt1: lhs.option, opt2: rhs.option)
 }

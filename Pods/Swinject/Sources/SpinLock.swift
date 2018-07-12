@@ -9,7 +9,7 @@
 import Foundation
 
 internal final class SpinLock {
-    private let lock = NSRecursiveLock()
+    private let lock =  NSLock()
 
     func sync<T>(action: () -> T) -> T {
         lock.lock()

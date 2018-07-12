@@ -28,14 +28,9 @@ public final class Assembler {
     /// Will create an empty `Assembler`
     ///
     /// - parameter parentAssembler: the baseline assembler
-    /// - parameter defaultObjectScope: default object scope for container
-    /// - parameter behaviors: list of behaviors to be added to the container
-    public init(parentAssembler: Assembler?, defaultObjectScope: ObjectScope = .graph, behaviors: [Behavior] = []) {
-        container = Container(
-            parent: parentAssembler?.container,
-            defaultObjectScope: defaultObjectScope,
-            behaviors: behaviors
-        )
+    ///
+    public init(parentAssembler: Assembler?) {
+        container = Container(parent: parentAssembler?.container)
     }
 
     /// Will create a new `Assembler` with the given `Assembly` instances to build a `Container`
@@ -74,17 +69,11 @@ public final class Assembler {
 
     /// Will create a new `Assembler` with the given `Assembly` instances to build a `Container`
     ///
-    /// - parameter assemblies:         the list of assemblies to build the container from
-    /// - parameter parent:             the baseline assembler
-    /// - parameter defaultObjectScope: default object scope for container
-    /// - parameter behaviors:          list of behaviors to be added to the container
-    public init(
-        _ assemblies: [Assembly],
-        parent: Assembler?,
-        defaultObjectScope: ObjectScope = .graph,
-        behaviors: [Behavior] = []
-    ) {
-        container = Container(parent: parent?.container, defaultObjectScope: defaultObjectScope, behaviors: behaviors)
+    /// - parameter assemblies: the list of assemblies to build the container from
+    /// - parameter parent:     the baseline assembler
+    ///
+    public init(_ assemblies: [Assembly], parent: Assembler?) {
+        container = Container(parent: parent?.container)
         run(assemblies: assemblies)
     }
 

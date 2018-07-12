@@ -1,23 +1,22 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'BitcoinDI' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for BitcoinDI
 
-pod 'Swinject'
-
+pod 'Swinject', '2.1.1'
+pod 'SwinjectAutoregistration', '2.1.1'
+pod 'SwinjectStoryboard', '1.1.2'
 
   target 'BitcoinDITests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Swinject', '2.1.1'
+    pod 'SwinjectAutoregistration', '2.1.1'
   end
 
   target 'BitcoinDIUITests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end
